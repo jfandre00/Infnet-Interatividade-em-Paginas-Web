@@ -10,8 +10,8 @@ function adicionarProduto() {
         limparFormulario();
     } else {
         alert('Por favor, preencha todos os campos corretamente.');
-    }
-}
+    } 
+} 
 
 function atualizarListaProdutos() {
     const listaProdutos = document.getElementById('listaProdutos');
