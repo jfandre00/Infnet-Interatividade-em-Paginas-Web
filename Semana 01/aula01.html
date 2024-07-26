@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Java Script</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        // Criação de um objeto literal
+        const pessoa = {primeiroNome: "André",
+                        ultimoNome: "Ferreira",
+                        idade:"43",
+                        corOlho:"azul"};
+        // Demonstração dos dados do objeto
+        document.getElementById("demo").innerHTML =
+        pessoa.primeiroNome + " tem " + pessoa.idade + " anos.";
+
+        var produto = {
+            nome: "Leite",
+            marca: "Parmalat",
+            valorUnitario: 5.00,
+            volume: "1 litro"
+        };
+
+        document.getElementById("demo2").innerHTML =
+        "O produto " + produto.nome + " é da marca " + produto.marca + " e custa " + produto.valorUnitario + " por " + produto.volume;
+
+    </script>
+    
+</body>
+</html>

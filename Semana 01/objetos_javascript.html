@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - 24-07-2024 Objetos JavaScript</title>
+</head>
+<body>
+    <script src="objetos.js"></script>
+
+    <script>
+
+        document.write(cadastroPessoa.nome[0] + "<br>");
+        document.write(cadastroPessoa.nome[1] + "<br>");
+        /* cadastroPessoa.saudacao() */
+
+
+        let andre = new Person("Andrew", "Ferreiral", 43, "azul");
+        let jao = new Person("Paulo", "Bussa", 33, "castanho");
+        let nildinha = new Person("Betina", "ABitch", 69, "cinza")
+        
+        document.write(" OBJETO PERSON <br>");
+        document.write(andre.firstName + "<br>");
+        document.write(andre.lastName + "<br>");
+        document.write("Idade do Jao" + jao.age + "<br>");
+        document.write("Mulherzinha Zoada do olho: " + nildinha.eyeColor + "<br>")
+        document.write("FIM" + "<br>")
+    
+
+
+        // Criação literal de objetos
+        let pessoa1 = {nome: "Andre",
+                       email: "jfandre@gmail.com",
+                       cpf: 212122122,
+                       nomeCompleto: function() {
+                        return this.nome + " " + this.email + "<br>";
+                       },
+                       fala: function()
+                       {
+                        return "Olá pessoal! <br>";
+                       }
+            
+        
+        };
+
+        document.write(pessoa1.nome + "<br>");
+        document.write(pessoa1.email + "<br>");
+        document.write(pessoa1.cpf + "<br>");
+        document.write(pessoa1.nomeCompleto());
+        document.write(pessoa1.fala());
+
+        let quadrado = {
+    lado: 3,
+    area: function() {
+        return this.lado * this.lado;
+    } // this é uma forma de confirmar que estou me referindo a esse objeto que estou declarando.
+};
+
+        document.write("Área do quadrado: " + quadrado.area() + "<br>");
+
+        //Quando você não tem certeza dos dados que vão vir para esse objeto, trabalhe da maneira abaixo, pois será possível incluir itens a vontade.
+        //Criação de objetos através da palavra NEW
+        let pessoa2 =  new Object();
+
+        pessoa2.primeiroNome = "Paulo";
+        pessoa2.segundoNome = "Afonso";
+
+
+
+        document.write(pessoa2.primeiroNome + " " + pessoa2.segundoNome + "<br>");
+
+        //--------------------------
+        //Classes - criando objetos
+
+        document.write("<br><br><br><br>")
+
+        let meuCarro = new Carro("Toyota", "Corolla");
+
+        document.write(meuCarro.marca + "<br>");
+
+    </script>
+</body>
+</html>

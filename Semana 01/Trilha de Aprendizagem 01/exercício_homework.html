@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercadinho do Zé Ninguém</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mercadinho do Zé Ninguém</h1>
+        <div class="form-section">
+            <h2>Adicionar Produto</h2>
+            <label for="nomeProduto">Nome do Produto:</label>
+            <input type="text" id="nomeProduto">
+            <label for="precoProduto">Preço:</label>
+            <input type="number" id="precoProduto">
+            <label for="quantidadeProduto">Quantidade:</label>
+            <input type="number" id="quantidadeProduto">
+            <button onclick="adicionarProduto()">Adicionar</button>
+        </div>
+        <div class="carrinho-section">
+            <h2>Produtos no Carrinho</h2>
+            <ul id="listaProdutos"></ul>
+        </div>
+        <div class="venda-section">
+            <h2>Venda</h2>
+            <button onclick="gerarRecibo()">Gerar Recibo</button>
+            <pre id="recibo"></pre>
+        </div>
+    </div>
+    <script src="homework_com_tela.js"></script>
+</body>
+</html>

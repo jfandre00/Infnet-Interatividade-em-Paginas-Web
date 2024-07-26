@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação literal de Objetos</title>
+    <style>
+        u {
+            color: red;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <h1 id="demo2"></h1>
+    <h2 id="demo3"></h2>
+    <script>
+        //Criação de um objeto literal
+        const pessoa = {
+            primeiroNome: "André",
+            ultimoNome: "Ferreira",
+            idade: 43,
+            corOlho: "azul"
+        };
+        //Demonstração dos dados do objeto
+        document.getElementById("demo").innerHTML = pessoa.primeiroNome + " tem " + pessoa.idade + " anos.";
+
+        //Criação de um objeto com a palavra chave new
+        const pessoa2 = new Object();
+        //Atribuição de dados nas propriedades do objeto
+        pessoa2.primeiroNome = "Mané";
+        pessoa2.ultimoNome = "Garrincha";
+        pessoa2.idade = 120;
+        pessoa2.corOlhos = "castanho-escuro";
+
+        //Demonstração dos dados do objeto
+        document.getElementById("demo2").innerHTML = pessoa2.primeiroNome + " " + pessoa2.ultimoNome + " tem " + pessoa2.idade + " anos e tem olhos cor " + pessoa2.corOlhos;
+
+        //Adição de um método no objeto
+        const pessoa_completo = {
+            primeiroNome: "Jack",
+            ultimoNome: "Bauer",
+            idade: 50,
+            corOlho: "azul",
+            nomeCompleto: function() {
+                return this.primeiroNome + " " + this.ultimoNome;
+            }
+        };
+         
+        //Demonstração dos dados do objeto
+        document.getElementById("demo3").innerHTML = "O nome completo do cidadão é: " + "<u>" + pessoa_completo.nomeCompleto() + "!</u> Tome cuidado, ele é perigoso!";
+
+    </script>
+
+</body>
+</html>
