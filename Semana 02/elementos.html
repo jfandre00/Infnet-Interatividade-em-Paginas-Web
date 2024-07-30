@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Elementos</title>
+</head>
+<body>
+    <p id="meuID">Esse parágrafo será selecionado pelo ID.</p>
+
+    <p>Este é o primeiro parágrafo.</p>
+    <p>Este é o segundo parágrafo.</p>
+
+    <p class="minhaClasse">Este é o primeiro parágrafo com a classe "minhaClasse".</p>
+    <p class="minhaClasse">Este é o segundo parágrafo com a classe "minhaClasse".</p>
+
+    <a href="https://www.w3schools.com">Visit W3Schools</a>
+
+    <div> <p>Este parágrafo dentro da div será selecionado.</p></div>
+
+    <p>Este parágrafo fora da div não será selecionado.</p>
+
+    <h1>Este é um cabeçalho</h1>
+    <p>Este parágrafo imediatamente após o cabeçalho será selecionado.</p>
+    <p>Este parágrafo não será selecionado</p>
+
+    <script>
+        let elemento = document.getElementById("meuID");
+        elemento.style.color = "red"; // Alteração da cor do parágrafo com ID meuID para vermelho
+
+        let elementos = document.getElementsByTagName("p");
+        for (var i=0; i < elementos.length; i++)
+            elementos[i].style.color = "blue"; // Alteração da cor de todos os parágrafos (<p>) para azul
+
+        let elementosc = document.getElementsByClassName("minhaClasse");
+        for (var i = 0; i < elementosc.length; i++)
+            elementosc[i].style.color = "green"; // Alteração da cor de todos os elementos com a classe minhaClasse para verde
+
+        let elementoatr = document.querySelector("[href='https://www.w3schools.com']");
+            elementoatr.style.color = "cyan"; // Alteração da cor do link com o href https://www.w3schools.com para ciano
+
+        let elementopseudo = document.querySelector("p:first-child");
+            elementopseudo.style.color = "orange"; // Alteração da cor do primeiro parágrafo (<p>) filho direto do body para laranja
+
+        let elementodesc = document.querySelector("div p");
+            elementodesc.style.color = "purple"; // Alteração da cor do parágrafo dentro da div para roxo
+
+        let elementocomb = document.querySelector("h1 + p");
+            elementocomb.style.color = "pink"; // Alteração da cor do parágrafo que segue imediatamente após o cabeçalho <h1> para rosa
+
+            var elementosall = document.querySelectorAll("*");
+            for (var i = 0; i < elementosall.length; i++)
+            elementosall[i].style.border = "1px solid black"; // Adiciona uma borda preta a todos os elementos
+
+
+    </script>
+</body>
+</html>

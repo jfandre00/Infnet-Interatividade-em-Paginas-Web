@@ -17,12 +17,12 @@
 
         let andre = new Person("Andrew", "Ferreiral", 43, "azul");
         let jao = new Person("Paulo", "Bussa", 33, "castanho");
-        let nildinha = new Person("Betina", "ABitch", 69, "cinza")
+        let nildinha = new Person("Betina", "ABetch", 69, "cinza")
         
         document.write(" OBJETO PERSON <br>");
         document.write(andre.firstName + "<br>");
         document.write(andre.lastName + "<br>");
-        document.write("Idade do Jao" + jao.age + "<br>");
+        document.write("Idade do Jão" + jao.age + "<br>");
         document.write("Mulherzinha Zoada do olho: " + nildinha.eyeColor + "<br>")
         document.write("FIM" + "<br>")
     
@@ -50,11 +50,11 @@
         document.write(pessoa1.fala());
 
         let quadrado = {
-    lado: 3,
-    area: function() {
-        return this.lado * this.lado;
-    } // this é uma forma de confirmar que estou me referindo a esse objeto que estou declarando.
-};
+            lado: 3,
+            area: function() {
+                    return this.lado * this.lado;
+            } // this é uma forma de confirmar que estou me referindo a esse objeto que estou declarando.
+        };
 
         document.write("Área do quadrado: " + quadrado.area() + "<br>");
 
@@ -65,8 +65,6 @@
         pessoa2.primeiroNome = "Paulo";
         pessoa2.segundoNome = "Afonso";
 
-
-
         document.write(pessoa2.primeiroNome + " " + pessoa2.segundoNome + "<br>");
 
         //--------------------------
@@ -74,9 +72,34 @@
 
         document.write("<br><br><br><br>")
 
+        //Criação de objeto através de classes
         let meuCarro = new Carro("Toyota", "Corolla");
 
-        document.write(meuCarro.marca + "<br>");
+        document.write(meuCarro.marca + "<br><br><br><br><br>");
+
+        //Início da aula de 29-07-24 - Trilha item 16
+
+        const objEmpresa = { empresa: "JMB Solutions", cnpj: "45555555/0001-77"};
+
+        document.write(objEmpresa.empresa + "<br>");
+
+        //Criação de objetos através de outros objetos com método create.
+        const funcionario = Object.create(objEmpresa, {nome: { value: "Paulo André" }});
+
+        const funcionario10 = {cpf: "0545445", salario: "10.000", objEmpresa};
+
+        document.write(funcionario10.objEmpresa.cnpj + "<br><br>");
+
+        document.write(funcionario.empresa + " -> TRABALHA NA -> " + funcionario.nome + "<br><br>");
+
+        // Criação de objetos através de outros objetos.
+
+        const objCarro = {nomeCarro: 'Ford'}
+        const funcionario2 = Object.assign({salario: 100000}, objEmpresa, objCarro);
+
+        document.write(funcionario2.empresa + " - ", funcionario2.nomeCarro + " - ", funcionario2.salario)
+        
+
 
     </script>
 </body>
