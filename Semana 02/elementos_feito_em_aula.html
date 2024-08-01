@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 02</title>
+</head>
+<body>
+    <p id="meuID">Esse parágrafo será selecionado pelo ID.</p>
+
+    <p>Este é o primeiro parágrafo</p>
+    <p>Este é o segundo parágrafo</p>
+
+    <p class="minhaClasse">Este é o primeiro parágrafo com a classe "minhaClasse".</p>
+    <p class="minhaClasse">Este é o segundo parágrafo com a classe "minhaClasse".</p>
+
+    <a href="https://www.w3schools.com" target="_blank">Visit W3Schools</a>
+
+    <br>
+    <br>
+    <br>
+
+    <div><p>Este parágrafo dentro da div será selecionado.</p></div>
+    
+    <p>Este parágrafo fora da div não será selecionado.</p>
+
+    <div><p>Testando aqui também</p></div>
+
+    <h1>Este é um cabeçalho</h1>
+    <p>Este parágrafo imediatamente após o cabeçalho será selecionado.</p>
+    <p>Este parágrafo não será selecionado.</p>
+
+    <script>
+        let elemento = document.getElementById("meuID");
+        elemento.style.color = "red"; // Modifica a cor do texto para vermelho
+        elemento.style.backgroundColor = "lightgrey"; // Coloquei esse fundo preto de curioso que sou!
+        elemento.style.textAlign = "center";
+
+        let elementos = document.getElementsByTagName("p");
+        for (var i = 1; i < elementos.length; i++)
+            elementos[i].style.color = "blue"; // Aqui deliberadamente não deixei mudar o primeiro p, pois já alterei ele acima, se tivesse deixado no i = 0 teria alterado todos os parágrafos.
+
+        let elementosc = document.getElementsByClassName("minhaClasse");
+        for (var i = 0; i < elementosc.length; i++)
+        {
+            elementosc[i].style.color = "green";
+            elementosc[i].style.fontWeight = "bold";
+            elementosc[i].style.fontFamily = "cursive";
+            elementosc[i].style.textAlign = "right";
+            elementosc[i].style.margin = "20px";
+        }
+
+        let elementoatr = document.querySelector("[href='https://www.w3schools.com']");
+        elementoatr.style.color = "red";
+        elementoatr.style.fontWeight = "bolder";
+        elementoatr.style.fontSize = "2.5em";
+        
+
+        let elementopseudo = document.querySelector("p:first-child");
+        elementopseudo.style.color = "darkblue";
+        elementopseudo.style.fontSize = "1.75em";
+        elementopseudo.style.border = "2px solid black";
+        elementopseudo.style.boxShadow = "3px 3px 3px black";
+        elementopseudo.style.padding = "5px";
+
+        let elementodesc = document.querySelectorAll("div p");
+        for (var i=0; i < elementodesc.length ; i++)
+            {
+                elementodesc[i].style.color = "brown";
+                elementodesc[i].style.fontWeight = "bolder";
+            }
+
+
+        let elementocomb = document.querySelector("h1 + p");
+        elementocomb.style.color = "pink";
+        elementocomb.style.fontWeight = "bold";
+
+        let elementocomb2 = document.querySelector("h1 + p + p");
+        elementocomb2.style.color = "red";
+        elementocomb2.style.fontWeight = "bolder";
+
+        var elementosall = document.querySelectorAll("*");
+        for (var i=0; i < elementosall.length ; i++){
+            elementosall[i].style.fontFamily = "sans-serif";
+        }
+     
+    </script>
+</body>
+</html>
