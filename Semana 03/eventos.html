@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o evento onClick no Javascript</title>
+</head>
+<body onload="checkCookies()">
+    <script src="eventos.js"></script>
+    <p id="paragrafo1" title="Esse é o texto">Oi!!!!</p>
+    <h1 onclick="this.innerHTML='Isso acontece quando usamos o evento onClick!'">Clique nesse link para testar o evento onClick!</h1>
+
+    <h1 onclick="trocaTexto(this)">Clique nesse texto!</h1>
+
+    <p id="pdata">Clique no botão abaixo para mostrar a data</p>   
+    <button onclick="displayDate()">Mostra data</button>
+
+    <br>
+    <h3>Informe seu nome: <input type="text" id="nome" oninput="tornaMaiuscula()"></h3>
+
+    <h2 onmouseover="mOver(this)">mova o mouse sobre</h2>
+
+    <h2 onmouseout="mOut(this)">mova o mouse sobre2</h2>
+    
+    <h2 onmouseover="mOver(this)" onmouseout="mOut(this)">Aqui tem 2 comportamentos com o mouse</h2>
+
+    <h1 onclick="trocaTexto(this)"
+        onmouseover="style.color='red'"
+        onmouseout="style.color='black'">Clique nesse texto</h1>
+
+    <p id="p1">
+        Isso é um texto
+        Isso é um texto
+        Isso é um texto
+    </p>
+    
+    <input type="button" value="Esconde Texto" onclick="document.getElementById('p1').style.visibility='hidden'">
+    <input type="button" value="Mostra Texto" onclick="document.getElementById('p1').style.visibility='visible'">
+
+
+</body>
+</html>
