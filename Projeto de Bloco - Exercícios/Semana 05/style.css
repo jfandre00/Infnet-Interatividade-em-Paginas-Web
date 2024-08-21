@@ -1,0 +1,75 @@
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid darkgreen;
+    border-radius: 4px;
+    cursor: pointer;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.checkbox--checked {
+    background-color: #47ae47;
+    color: white;
+}
+
+.logo {
+    color: purple;
+    font-size: 80px;
+    
+}
+
+.uploadFile {
+    width: 200px;
+    height: 120px;
+    border: 2px solid darkblue;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+}
+.icone {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.uploadFile--selected h3{
+    display: none;
+}
+
+.uploadFile--selected .icone{
+    display: none;
+}
+
+.selecionado{
+    display: none;
+    font-size: 32px;
+}
+
+.uploadFile--selected .selecionado {
+    display: block;
+}
+
+.close{
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    font-size: 18px;
+    color: black;
+    display: none;
+    
+}
+
+.uploadFile--selected .close{
+    display: block;
+}
