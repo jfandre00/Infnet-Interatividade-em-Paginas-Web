@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag And Drop</title>
+    <link rel="stylesheet" href="dragndrop.css">
+</head>
+<body>
+    <script src="dragndrop.js"></script>
+    <p>Arraste o texto para dentro do retângulo</p>
+    <div id="div1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <br>
+    <p id="drag1" draggable="true" ondragstart="drag(event)">Arraste-me</p>
+    
+</body>
+</html>

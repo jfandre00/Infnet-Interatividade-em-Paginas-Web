@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Input</title>
+</head>
+<body>
+    <input type="text" id="nome" oninput="this.value = this.value.toUpperCase()" placeholder="Digite algo...">
+
+    <button id="limpar">Limpar</button>
+    <script>
+        document.getElementById("nome").oninput = function() {
+            this.value = this.value.replace(/[0-9]/g, '');
+            this.value = this.value.toUpperCase(); // já está colocado dentro tag input, mas poderia tirar e deixar somente essa linha.
+        };
+
+        document.getElementById("limpar").addEventListener("click", function() {
+            const input = document.getElementById("nome");
+            input.value = "";
+            input.focus();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag 'N Drop #2!!</title>
+    <style>
+        .alvo {
+            width: 100px;
+            height: 35px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>Arraste o texto entre os dois retângulos</p>
+    <div class="alvo" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Me arraste!</p>
+    </div>
+    <p id="demo"></p>
+    <div class="alvo" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <script src="dragndrop2.js"></script>
+</body>
+</html>

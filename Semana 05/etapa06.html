@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de teclado, alteração de seleção e arrastar / soltar</title>
+</head>
+<body>
+    <script src="etapa06.js"></script>
+    <h1>Evento onkeydown</h1>
+        
+    <p>tecla</p>
+    <input type="text" id="inputText">
+    <p id="demo"></p>
+
+    <p>nome</p>
+    <input type="text" id="nome" onfocus="destacar()" onblur="normalizar()">
+    <p>sobrenome</p>
+    <input type="text" id="sobrenome" onchange="colocarMaiuscula(this)">
+
+    <p></p>
+    <button id="botao">Inserir</button>
+
+    <br><br><br>
+    <select id="curso" onchange="mostraSelecao()" style="font-size: 20px;">
+        <option value="Java">Java</option>
+        <option value="Delphi">Delphi</option>
+        <option value="Python">Python</option>
+        <option value="Kotlin">Kotlin</option>
+    </select>
+
+    <button id="botao2" onclick="mostraDados()">Mostra Dados</button>
+    <br><br>
+    <p id="dados"></p>
+
+    <input type="text" oninput="this.value = this.value.toUpperCase()" placeholder="Digite
+algo...">
+
+</body>
+</html>
