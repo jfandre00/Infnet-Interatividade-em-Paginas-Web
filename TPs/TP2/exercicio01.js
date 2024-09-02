@@ -1,0 +1,3 @@
+function aparecerAlert() {
+    alert("Cliquei");
+};
