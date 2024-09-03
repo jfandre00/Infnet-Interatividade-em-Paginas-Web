@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+    let button = document.createElement('button');
+    button.textContent = 'Inserir';
+    button.onclick = function() {
+        let h2 = document.createElement('h2');
+        h2.textContent = 'Inserido';
+        //h2 tem que ser filho de container
+        let container = document.querySelector('#container');
+        container.appendChild(h2);
+
+    }
+    document.body.appendChild(button);
+    
+</script>
+</html>

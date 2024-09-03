@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP02 Exercício 08</title>
+</head>
+<body>
+    <span>Olá mundo</span>
+
+    <script>
+        // Adicione o elemento <span> como filho do elemento <div> com a classe "mensagem"
+        let span = document.querySelector('span');
+        // criar a div pois ela não existe no html
+        let div = document.createElement('div');
+        div.classList.add('mensagem');
+        document.body.appendChild(div);
+        // adicionar o span como filho da div
+        div.appendChild(span);
+        
+    </script>
+</body>
+</html>

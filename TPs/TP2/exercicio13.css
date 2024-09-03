@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#modal {
+  margin: 40px;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: 3px solid blue;
+  text-align: right;
+}
+
+.conteudo {
+  text-align: center;
+}
+
+#close {
+  width: 30px;
+  cursor: pointer;
+}
+
+/* 2. Faça com que este elemento div, através da classe criada, não seja mais visível na tela. Para isto crie a classe que faça este efeito no arquivo style.css e adicione esta classe via DOM */
+
+.hide {
+    display: none;
+}
