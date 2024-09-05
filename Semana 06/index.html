@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar e estilizar formulários com HTML5 e CSS3</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form action="/action_page.php">
+      <label for="fname">Primeiro nome:</label><br />
+      <input type="text" name="fname" id="fname" value="John" /><br />
+      <label for="lname">Último nome:</label><br />
+      <input type="text" name="lname" id="lname" value="Doe" /><br /><br />
+    </form>
+
+    <select name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat" selected>Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+
+    <p>Marque as <strong>disciplinas</strong> que você mais gosta</p>
+    <input type="checkbox" name="discp1" id="discp1" value="Banco_dados" />
+    <label for="discp1">Banco de Dados</label><br />
+
+    <input type="checkbox" name="discp2" id="discp2" value="Dev_web" />
+    <label for="discp2">Desenvolvimento Web</label><br />
+
+    <input type="checkbox" name="discp3" id="discp3" value="Met_age" />
+    <label for="discp3">Metodologias Ágeis</label><br />
+
+    <p>Escolha a sua <strong>linguagem</strong> favorita:</p>
+
+    <input type="radio" name="fav_language" id="Python" value="Python" />
+    <label for="html">PYTHON</label><br />
+
+    <input type="radio" name="fav_language" id="php" value="php" />
+    <label for="php">PHP</label><br />
+
+    <input type="radio" name="fav_language" id="javascript" value="Javascript" />
+    <label for="javascript">Javascript</label><br />
+
+    <br />
+
+    <label for="aniversario">Aniversário:</label>
+    <input type="date" name="aniversario" id="aniversario" />
+    <br />
+
+    <label for="email">Informe seu e-mail:</label>
+    <input type="email" name="email" id="email" />
+    <br />
+
+    <label for="favcolor">Selecione sua cor favorita: </label>
+    <input type="color" name="favcolor" id="favcolor" /><br /><br />
+    <br />
+
+    <textarea name="message" id="message" rows="10" cols="30">
+      Aqui você pode deixar sua opinião
+    </textarea>
+    <br />
+
+    <input type="submit" value="Submit" />
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

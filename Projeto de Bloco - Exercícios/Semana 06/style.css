@@ -1,0 +1,54 @@
+.uploadFile {
+    width: 240px;
+    height: 120px;
+    border-radius: 8px;
+    border: 2px solid blue;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.uploadFile .closeIcon {
+    display: none;
+}
+
+.uploadFile .checkIcon {
+    display: none;
+}
+
+.uploadIcon {
+    color: blue;
+    font-size: 34px;
+}
+
+.uploadFile--selected {
+    border: 2px solid green;
+    color: green;
+}
+
+.uploadFile--selected .uploadIcon {
+    display: none;
+}
+
+.uploadFile--selected .checkIcon {
+    display: block;
+}
+
+.uploadFile--selected .closeIcon {
+    display: block;
+}
+
+.checkIcon {
+    font-size: 34px;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: red;
+}
+
+#inputFile {
+    display: none;
+}
