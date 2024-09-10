@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+  }
+  
+  .fundoVerde{
+    background-color: green;
+  }
+  
+  .fonteAmarela{
+    color: yellow;
+  }
+  
+  .bordaVermelha{
+    border: 3px solid red;
+  }
+  
+  .bordaRoxa{
+    border: 3px solid purple;
+  }
+  
+  .tamanhoMedio{
+    width: 200px;
+  }
+  
+  .espacoInterno{
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  
+  .tamanhoGrande{
+    width: 300px;
+  }
+  
+  .espacoInternoGrande{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .negrito{
+    font-weight: bold;
+  }
