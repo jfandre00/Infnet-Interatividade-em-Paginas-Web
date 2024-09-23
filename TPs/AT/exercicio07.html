@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT - Exercício 07</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #container h2 {
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AT - Exercício 07</h1>
+    <div id="container"></div>
+    <button onclick="criarH2()">Inserir</button>
+    <script>
+        function criarH2(){
+            let h2 = document.createElement("h2");
+            h2.textContent = "Título Inserido";
+            document.getElementById("container").appendChild(h2);
+        }
+    </script>
+</body>
+</html>

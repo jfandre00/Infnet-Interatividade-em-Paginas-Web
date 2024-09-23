@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Países</title>
+    <style>
+        .corVerde { color: green; }
+        .corRoxa { color: purple; }
+        .corAmarela { color: yellow; }
+        .corAzul { color: blue; }
+        .corPreta { color: black; }
+    </style>
+</head>
+<body>
+
+    <ul id="listaPaises" class="corVerde corPreta">
+        <li class="corAmarela">Alemanha</li>
+        <li>Itália</li>
+        <li class="corAmarela corAzul">Suécia</li>
+    </ul>
+
+    <script>
+        // Seleciona a lista "ul"
+        const ulElement = document.getElementById('listaPaises');
+
+        // Adiciona um evento de clique a cada "li" dentro da "ul"
+        ulElement.addEventListener('click', function(event) {
+            const liElement = event.target; // Captura o "li" clicado
+            const parentUl = liElement.parentNode; // Captura o elemento "ul" pai do "li"
+
+            if (liElement.tagName === 'LI') {
+                // Verifica se o elemento pai (ul) tem a classe "corVerde"
+                if (parentUl.classList.contains('corVerde')) {
+                    parentUl.classList.remove('corVerde');
+                    parentUl.classList.add('corRoxa');
+                }
+
+                // Verifica se o "li" tem a classe "corAmarela"
+                if (liElement.classList.contains('corAmarela')) {
+                    liElement.classList.add('corAzul');
+                    parentUl.classList.remove('corPreta');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

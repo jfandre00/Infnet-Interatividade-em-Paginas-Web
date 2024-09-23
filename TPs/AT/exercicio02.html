@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT - Exercício 02</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form id="formFrutas">
+        <label for="cor">Cor:</label>
+        <input type="text" name="cor" id="cor" required>
+        <br>
+        <label for="tamanho">Tamanho:</label>
+        <input type="text" name="tamanho" id="tamanho" required>
+        <br>
+        <label for="pais">País:</label>
+        <input type="text" name="pais" id="pais" required>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        let fruta = {
+            cor: "amarelo",
+            tamanho: "média",
+            país: "Brasil"
+        };
+        document.getElementById("formFrutas").addEventListener("submit", function(event) {
+            event.preventDefault();
+            fruta.cor = document.getElementById("cor").value;
+            fruta.tamanho = document.getElementById("tamanho").value;
+            fruta.país = document.getElementById("pais").value;
+            alert("Fruta: " + fruta.cor + ", " + fruta.tamanho + ", " + fruta.país + ". Atualizado com sucesso!");
+            console.log(fruta);
+        });
+    </script>
+</body>
+</html>

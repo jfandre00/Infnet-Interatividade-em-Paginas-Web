@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT - Exercício 01</title>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            width: calc(100% - 110px);
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="radio"] {
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #mostrarDados {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+        <br>
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="sexo">Sexo:</label>
+        <input type="radio" name="sexo" id="sexo" value="M" required> Masculino
+        <input type="radio" name="sexo" id="sexo" value="F" required> Feminino
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <p id="mostrarDados"></p>
+        <script>
+
+            document.getElementById('form1').addEventListener('submit', function(event){
+                event.preventDefault();
+                let pessoa = {
+                    nome: document.getElementById('nome').value,
+                    idade: document.getElementById('idade').value,
+                    email: document.getElementById('email').value,
+                    sexo: document.querySelector('input[name="sexo"]:checked').value
+                };
+            document.getElementById('mostrarDados').style.display = 'block';
+            document.getElementById('mostrarDados').innerHTML = `Nome: ${pessoa.nome}<br>Idade: ${pessoa.idade}<br>Email: ${pessoa.email}<br>Sexo: ${pessoa.sexo}`;    
+            });
+        </script>
+</body>
+</html>

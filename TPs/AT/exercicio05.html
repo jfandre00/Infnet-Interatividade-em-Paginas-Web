@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT - Exercício 05</title>
+    <style>
+        body {
+            font-family: cursive;
+            margin: 20px;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        input {
+            margin-top: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <span id="texto">Fulano</span>
+    <br>
+    <input type="text" id="nome">
+    <br>
+    <button onclick="substituirSpan()">Substitua a Span</button>
+    <script>
+        function substituirSpan() {
+
+            let nome = document.getElementById('nome').value;
+            if (nome == '') {
+                alert('Digite algo no input!');
+            } else {
+                document.getElementById('texto').innerHTML = nome;
+                document.getElementById('nome').value = '';
+            }
+        }
+    </script>
+</body>
+</html>

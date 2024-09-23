@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT - Exercício 04</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AT - Exercício 04 - Objeto Escola com Objeto Endereço.</h1>
+    <p></p>
+    <script>
+        //criar um objeto chamado escola que possua as propriedades número de alunos, nome do diretor, ano de fundação e endereço. O endereço é outro objeto que possui as propriedades rua, bairro e cidade.
+        let escola = {
+            numeroAlunos: 500,
+            nomeDiretor: 'João Amaro',
+            anoFundacao: 1950,
+            endereco: {
+                rua: 'Rua das Flores 150',
+                bairro: 'Centro',
+                cidade: 'São Paulo'
+            }
+        };
+        document.querySelector('p').innerHTML = `<u><strong>Dados da Escola: </strong></u> <br><strong>Número de alunos:</strong> ${escola.numeroAlunos} <br><strong>Diretor:</strong> ${escola.nomeDiretor} <br><strong>Fundada em:</strong> ${escola.anoFundacao} <br><strong>Endereço:</strong> ${escola.endereco.rua}, ${escola.endereco.bairro}, ${escola.endereco.cidade}`;
+        console.log(escola);
+    </script>
+</body>
+</html>

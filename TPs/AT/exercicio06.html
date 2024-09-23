@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT - Exercício 06</title>
+    <style>
+        #card{
+            width: 400px;
+            height: 100px;
+            background-color: aqua;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+            border: 1px solid #000;
+        }
+        .corVermelha{
+            color: red;
+        }
+        .card{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <div id="card">Clique aqui para adicionar uma classe a mim</div>
+    <script>
+        document.getElementById("card").addEventListener("click", function(){
+            this.classList.add("card");
+        });
+        //ao clicar no h1 faça com que a classe corVermelha seja adiciona / removida alternadamente cada vez que clicar no h1
+        document.querySelector("h1").addEventListener("click", function(){
+            this.classList.toggle("corVermelha");
+        });
+    </script>
+</body>
+</html>
