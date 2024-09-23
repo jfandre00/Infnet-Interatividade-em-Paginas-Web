@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 05</title>
+</head>
+<body>
+    <label for="cargo">Cargo:</label>
+    <input type="text" id="cargo">
+    <script>
+        function verCargo() {
+            let cargo = document.getElementById('cargo').value;
+            alert('Cargo: ' + cargo);
+        }
+        window.onload = function() {
+            document.getElementById('cargo').addEventListener('change', verCargo)
+        }
+    </script>
+    
+</body>
+</html>
