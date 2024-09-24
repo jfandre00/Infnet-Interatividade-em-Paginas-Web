@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Validação via Javascript - AT - Exercício 14</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #bbbbbb;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        button {
+            background-color: #6200ea;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email">
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf">
+            <br>
+            <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const cpf = document.getElementById('cpf').value.trim();
+
+            if (nome.length === 0) {
+                alert('O campo nome não pode estar vazio.');
+                return;
+            }
+
+            if (!email.includes('@')) {
+                alert('O campo e-mail deve conter um @.');
+                return;
+            }
+
+            if (cpf.length !== 11 && cpf.length !== 14) {
+                alert('O campo CPF deve conter 11 ou 14 caracteres.');
+                return;
+            }
+
+            alert('Formulário enviado com sucesso!');
+            document.getElementById('nome').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('cpf').value = '';
+
+        });
+    </script>
+</body>
+</html>

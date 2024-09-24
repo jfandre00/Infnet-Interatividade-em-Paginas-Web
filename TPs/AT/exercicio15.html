@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AT - Exercício 15</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input, select, button {
+            margin-top: 5px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        #area {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #area label {
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        #validar {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <label for="area">Área de Conhecimento:</label>
+        <div id="area">
+            <label><input type="checkbox" name="area" value="1"> Ciências Exatas</label>
+            <label><input type="checkbox" name="area" value="2"> Ciências Humanas</label>
+            <label><input type="checkbox" name="area" value="3"> Ciências Biológicas</label>
+        </div>
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf">
+        <label for="data">Data de Agendamento:</label>
+        <input type="text" id="data" name="data">
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco">
+        <button type="submit">Enviar</button>
+
+        <div id="validar"></div>
+        <script>
+            document.getElementById('formulario').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                const nome = document.getElementById('nome').value.trim();
+                const area = document.querySelectorAll('input[name="area"]:checked');
+                let cpf = document.getElementById('cpf').value.trim();
+                cpf = cpf.replace(/[.\-]/g, '');
+                const data = document.getElementById('data').value.trim();
+                const endereco = document.getElementById('endereco').value.trim();
+
+                if (nome.length < 3 || nome.length > 10) {
+                    alert('O campo nome deve ter entre 3 e 10 caracteres.');
+                    return;
+                }
+
+                if (area.length === 0) {
+                    alert('Selecione pelo menos uma área de conhecimento.');
+                    return;
+                }
+
+                if (cpf.length !== 11) {
+                    alert('O campo CPF deve ter 11 caracteres.');
+                    return;
+                }
+
+                if (data.indexOf('/') === -1) {
+                    alert('O campo data de agendamento deve conter o símbolo /.');
+                    return;
+                }
+
+                if (endereco.toLowerCase().indexOf('rua') === -1) {
+                    alert('O campo endereço deve conter a palavra "rua".');
+                    return;
+                }
+
+                document.getElementById('validar').textContent = 'Formulário validado com sucesso!';
+
+                document.getElementById('formulario').reset();
+
+            });
+
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+    <style>
+        #escolhido {
+            display: inline-block;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <span id="escolhido"></span>
+    <ul>
+        <li id="brasil">Brasil</li>
+        <li id="argentina">Argentina</li>
+    </ul>
+    
+
+    <script>
+        // Seleciona os elementos li e span
+        const brasilLi = document.getElementById('brasil');
+        const argentinaLi = document.getElementById('argentina');
+        const escolhidoSpan = document.getElementById('escolhido');
+
+        // Adiciona o event listener para o li com id "brasil"
+        brasilLi.addEventListener('click', function() {
+            escolhidoSpan.textContent = brasilLi.textContent;
+            escolhidoSpan.style.border = '1px solid green';
+        });
+
+        // Adiciona o event listener para o li com id "argentina"
+        argentinaLi.addEventListener('click', function() {
+            escolhidoSpan.textContent = argentinaLi.textContent;
+            escolhidoSpan.style.border = '1px solid blue';
+        });
+    </script>
+</body>
+</html>

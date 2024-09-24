@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário AT - Exercício 13</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="apelido">Apelido:</label>
+            <input type="text" id="apelido" name="apelido" minlength="3" maxlength="8" required>
+        </div>
+        <div>
+            <label>Estilos Musicais:</label>
+            <div>
+                <input type="checkbox" id="rock" name="estilos" value="rock">
+                <label for="rock">Rock</label>
+            </div>
+            <div>
+                <input type="checkbox" id="pop" name="estilos" value="pop">
+                <label for="pop">Pop</label>
+            </div>
+            <div>
+                <input type="checkbox" id="mpb" name="estilos" value="mpb">
+                <label for="mpb">MPB</label>
+            </div>
+        </div>
+        <div>
+            <label for="profissao">Profissão:</label>
+            <input type="text" id="profissao" name="profissao" required>
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>
